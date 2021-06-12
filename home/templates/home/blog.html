@@ -1,0 +1,55 @@
+{% extends "home/base.html" %}
+{% block content %}
+{% load static %}
+    <!-- ################# Slider Starts Here#######################--->
+
+      <!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Our Blog</h2>
+                           <ul>
+                               <li> <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                               <li><i class="fas fa-angle-double-right"></i> Blog</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+       
+    <!-- ######## Page  Title End ####### -->
+    
+     <section class="our-blog">
+         	<div class="container">
+         		
+        		<div class="blog-row row">
+        			 <!-- ######## Blogs from admin pandel here ####### -->
+                    {% for blog in blogs %}
+        			<div class="col-md-4 col-sm-6">
+                        
+        				<div class="single-blog">
+        					<figure>
+        						<img src="{{blog.thumbnail.url}}" alt="">
+        					</figure>
+        					<div class="blog-detail">
+        						<small>{{blog.writer}} | {{blog.date_posted}}</small>
+								<h4>{{blog.title}}</h4>
+								<p>{{blog.blog_content}}</p>
+								<div class="link">
+									<a href="{{blog.link}}" target="_blank">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+								</div>
+        					</div>
+        					
+        					
+        				</div>
+                       
+        			</div>
+                     {% endfor %}
+        			
+        		</div>
+         	</div>
+         </section>
+
+{% endblock %}
+     <!-- ################# Footer Starts Here#######################--->
+
+      

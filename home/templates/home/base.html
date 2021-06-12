@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Aura Ed | Lets educate</title>
+{% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/fav.png'%}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'css/fontawsom-all.min.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+
+   
+<script type="text/javascript" src="{% static 'js/jquery-3.2.1.min.js'%}">
+</script>
+</head>
+
+    <body>
+        <!-- ################# Header Starts Here#######################--->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 left-item">
+                        <ul>
+                            <li><i class="fas fa-envelope-square"></i><a href="mailto:info@auraed.org">info@auraed.org</a></li>
+                            <!-- <li><i class="fas fa-phone-square"></i> +123 987 887 765</li> -->
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block right-item">
+                        <ul>
+
+                        <li><a href="https://www.facebook.com/auraednepal" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/auraed/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="https://www.twitter.com/AuraEd1" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li> <a href="https://www.instagram.com/auraednepal" target="_blank"><i class="fab fa-instagram"></i></a></li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img" id="nav-img-fix">
+                        <a href="index.html"><img src="{% static 'images/logo.webp'%}" alt=""></a>
+                       <a data-toggle="collapse" data-target="#menu" href="#index.html" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About Us</a></li>
+                            <li><a href="{% url 'portfolio' %}">Albums</a></li>
+                            <li><a href="{% url 'blog' %}">Blog</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+{% block content %}{% endblock %}
+
+
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <h2>About Us</h2>
+                        <p>Aura is a non-profit organization established with the vision of making practical impact in terms of digital education
+                        throughout Nepal. We committedly aspire to be change-makers and risk-takers of society.
+                        </p>
+                        <p>We are passionate about creating and supporting real and lasting change for people and communities.
+</p>
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <h2>Useful Links</h2>
+                        <ul class="list-unstyled link-list">
+                            <li><a href="{% url 'about' %}">About us</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="{% url 'portfolio' %}">Portfolio</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="{% url 'blog' %}">Blog</a><i class="fa fa-angle-right"></i></li>
+                            <li><a href="{% url 'contact' %}">Contact us</a><i class="fa fa-angle-right"></i></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 col-sm-12 map-img">
+                        <h2>Contact Us</h2>
+                        <address class="md-margin-bottom-40">
+                            Kathmandu, NEP <br>
+                            Phone: +977 9876543210 <br>
+                            Email: <a href="mailto:info@auraed.org" target="_blank" class="">info@auraed.org</a><br>
+                            <!--use target="_blank to keep user on our site on every link or href"-->
+                            Web: <a href="https://auraed.org/" class="">www.auraed.org</a>
+                            <!--should change to ours-->
+                        </address>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </footer>
+        <div class="copy">
+            <div class="container">
+                <a href="#">2021 &copy; All Rights Reserved | Designed and Developed by Aura Ed</a>
+
+                <span>
+                    <a href="https://www.facebook.com/auraednepal" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.linkedin.com/company/auraed/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.twitter.com/AuraEd1" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/auraednepal" target="_blank"><i class="fab fa-instagram"></i></a>
+                </span>
+            </div>
+
+        </div>
+
+
+        </body>
+
+<script src="{% static 'js/jquery-3.2.1.min.js'%}">
+</script>
+
+<script src="{% static 'js/popper.min.js'%}">
+</script>
+
+<script src="{% static 'js/bootstrap.min.js'%}">
+</script>
+
+<script src="{% static 'js/script.js'%}">
+</script>
+
+
+</html>

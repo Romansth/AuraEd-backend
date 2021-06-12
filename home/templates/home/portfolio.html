@@ -1,0 +1,113 @@
+{% extends "home/base.html" %}
+{% block content %}
+{% load static %}
+    <!-- ################# Slider Starts Here#######################--->
+
+      <!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Albums</h2>
+                           <ul>
+                               <li> <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                               <li><i class="fas fa-angle-double-right"></i>Albums</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+       
+    <!-- ######## Page  Title End ####### -->
+    
+ <!--  ************************* Portfolio Starts Here ************************** -->
+        <div class="gallery">    
+           <div class="container">
+              <div class="row">
+                
+
+        <div class="gallery-filter d-none d-sm-block">
+            <button class="btn btn-default filter-button" data-filter="all">All</button>
+            <button class="btn btn-default filter-button" data-filter="hdpe">Digital Literacy</button>
+            <button class="btn btn-default filter-button" data-filter="sprinkle">Child Education</button>
+            <button class="btn btn-default filter-button" data-filter="spray">Workshop</button>
+           <!--  <button class="btn btn-default filter-button" data-filter="irrigation">Donation</button> -->
+        </div>
+        <br/>
+
+
+            {% for album in albums %}
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter {{album.img_filter}}">
+                <img src="{{album.image.url}}" class="img-responsive">
+            </div>
+            {% endfor %}
+
+            <!-- <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_02.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="assets/images/gallery/gallery_03.webp" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="assets/images/gallery/gallery_04.webp" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/images/gallery/gallery_05.webp" class="img-responsive">
+            </div>
+
+          
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/images/gallery/gallery_06.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="assets/images/gallery/gallery_07.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter irrigation">
+                <img src="assets/images/gallery/gallery_08.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <img src="assets/images/gallery/gallery_09.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                <img src="assets/images/gallery/gallery_10.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_11.jpeg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_12.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_13.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_14.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_15.jpg" class="img-responsive">
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
+                <img src="assets/images/gallery/gallery_16.jpg" class="img-responsive">
+            </div>
+ -->
+        </div>
+    </div>
+       
+       
+       </div>
+{% endblock %}
+        <!-- ######## Gallery End ####### -->
+    
+     <!-- ################# Footer Starts Here#######################--->

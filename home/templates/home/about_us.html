@@ -1,0 +1,141 @@
+{% extends "home/base.html" %}
+{% block content %}
+{% load static %}
+    <!-- ################# Slider Starts Here#######################--->
+
+      <!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>About AuraEd</h2>
+                           <ul>
+                               <li> <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                               <li><i class="fas fa-angle-double-right"></i> About Us</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+
+    <!-- ######## Page  Title End ####### -->
+
+
+    <!-- ################# About Us Starts Here#######################--->
+
+    <section class="with-medical">
+        <div class="container">
+
+            <div class="row">
+               <div class="col-lg-6 col-md-12">
+                    <img src="{% static 'images/about.webp'%}" alt="">
+                </div>
+                <div class="col-lg-6 col-md-12 txtr">
+                    <h4>The social value we deliver<br>
+                     <span>Impacting by doing</span>
+                    </h4>
+                    <p>As we are growing and having positive change happen – for communities, the impact we generate has of course become
+                    diverse but also challenging on the other hand. Driving social contribution is hard, but it’s also hugely rewarding.
+                    With all these complexities we thrive to have a practical impact with a bag of determination, energy, and passion to
+                    contribute through the heart.</p>
+                    <p>We take pride in tracking, recording, and honing our impact in both words and numbers as it can work as evidence
+                    sustained impact to motivate and influence others for more and more contributions to make. We believe in giving what we
+                    have. We will deliver the most engaging and effective knowledge about the technologies that we have.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- ################# Our Team Starts Here#######################--->
+
+
+<section class="our-team">
+    <div class="container">
+        <div class="session-title w-100 row">
+            <h2>Meet our Team</h2>
+            <p>Take a look at our innovative team</p>
+        </div>
+        <div class="row team-member">
+            {% for team in teams %}
+            <div class="col-md-3 col-sm-6">
+                <div class="user-card">
+                    <div class="userar">
+                        <img class="teammempic" alt="" src="{{team.photo.url}}" >
+                    </div>
+                    <div class="detfs">
+                        <p>{{team.name}}<i> -<br>{{team.position}}</i></p>
+                        <ul>
+                            <li><a href="{{team.facebook}}" target="_blank"><i
+                                        class="fab fa-facebook-f fa-lg"></i></a></li>
+                            <li><a href="{{team.twitter}}"
+                                    target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+                            <li><a href="{{team.linkedin}}"
+                                    target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="{{team.github}}"
+                                    target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+                            <li><a href="{{team.website}}" target="_blank"><i class="fas fa-globe"></i></a>
+                            </li>
+                           
+                        </ul>
+                        <br>
+                        <p>{{team.description}}</p>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+      
+            <div class="col-md-3 col-sm-6">
+                <div class="user-card">
+                    <div class="userar">
+                        <img class="teammempic" alt="" src="{% static 'images/team/team-memb5.jpg'%}">
+                    </div>
+                    <div class="detfs">
+                        <p>Agrim Thakuri<i> -<br>Lead Designer</i></p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=100021651019809" target="_blank"><i
+                                        class="fab fa-facebook-f fa-lg"></i></a></li>
+                            <li><a href=""
+                                    target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+                            <li><a href="#"
+                                    target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="http://linkedin.com/in/agrim-uchai-3b4b1120a"
+                                    target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+                 <!--            <li><a href="#" target="_blank"><i class="fas fa-globe"></i></a></li> -->
+                        </ul>
+                        <br>
+                        <p>Graphic Designer</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="user-card">
+                    <div class="userar">
+                        <img class="teammempic" alt="" src="{% static 'images/team/team-memb6.jpg'%}">
+                    </div>
+                    <div class="detfs">
+                        <p>Sampreshna Shahi<i> -<br>Campaign Manager</i></p>
+                        <ul>
+                            <li><a href="https://www.facebook.com/samprusnow8" target="_blank"><i
+                                        class="fab fa-facebook-f fa-lg"></i></a></li>
+                            <li><a href="#"
+                                    target="_blank"><i class="fab fa-twitter fa-lg"></i></a></li>
+                            <li><a href="#"
+                                    target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="#"
+                                    target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+                            <!-- <li><a href="https://romansth.com.np/" target="_blank"><i class="fas fa-globe"></i></a></li> -->
+                        </ul>
+                        <br>
+                        <p>Natural leader and social volunteer</p>
+
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+{% endblock %}
+     <!-- ################# Footer >
